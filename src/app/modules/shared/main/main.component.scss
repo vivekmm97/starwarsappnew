@@ -1,0 +1,113 @@
+
+  .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  .row
+  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: none;
+    border-top: 1px solid #1B6BA2;
+    padding-top: 2%;
+    width: 100%;
+    .btn
+    {
+      border: none;
+      border-radius: 0px;
+      border-color: transparent;
+      outline: none;
+    }
+    .films
+    {
+      img {
+        content: url('src/assets/topics/films_normal.png');
+      }
+    }
+    .films:hover
+    {
+      img {
+        content: url('src/assets/topics/films_pressed.png');
+      }
+    }
+    .species
+    {
+      img {
+        content: url('src/assets/topics/species_normal.png');
+      }
+    }
+    .species:hover
+    {
+      img {
+        content: url('src/assets/topics/species_pressed.png');
+      }
+    }
+    .planets
+    {
+      img {
+        content: url('src/assets/topics/planets_normal.png');
+      }
+    }
+    .planets:hover
+    {
+      img {
+        content: url('src/assets/topics/planets_pressed.png');
+      }
+    }
+    .people
+    {
+      img {
+        content: url('src/assets/topics/characters_normal.png');
+      }
+    }
+    .people:hover
+    {
+      img {
+        content: url('src/assets/topics/characters_pressed.png');
+      }
+    }
+    .starship
+    {
+      img {
+        content: url('src/assets/topics/droids_normal.png');
+      }
+    }
+    .starship:hover
+    {
+      img {
+        content: url('src/assets/topics/droids_pressed.png');
+      }
+    }
+    .vehicle
+    {
+      img {
+        content: url('src/assets/topics/vehicles_normal.png');
+      }
+    }
+    .vehicle:hover
+    {
+      img {
+        content: url('src/assets/topics/vehicles_pressed.png');
+      }
+    }
+        
+    .link
+    {
+      a{
+        text-decoration:none;
+        font-size: 18px;
+        font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: #FFFFFF;
+        font-weight: bold;
+      }
+    }
+    .img-chng
+    {
+      position: relative;
+      display: inline-block;
+    }
+      }
+    }

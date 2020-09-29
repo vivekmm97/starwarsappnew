@@ -1,0 +1,206 @@
+<div class="container" id="data">
+    <div class="flex-head">
+        <div class="row">
+            <div class="image"><img src="./assets/images/logo.png" alt="Starwar"></div>
+            <ngx-simplebar class="right" [options]="options">
+            <ng-container *ngIf="Data?.name;else title">
+                <div class="name">
+                    {{Data.name}}
+                </div>
+            </ng-container>
+            <ng-template #title>
+                <div class="name">
+                    {{Data.title}}
+                </div>
+            </ng-template>
+            <ng-container *ngIf="Data?.designation">
+                <div class="designation"  >
+                    <div class="title">Designation: </div>
+                    <div class="data">
+                        {{Data.designation}}
+                    </div>
+                </div>
+            </ng-container>
+            <ng-container *ngIf="Data?.gender">
+            <div class="gender">
+                <div class="title" >Gender: </div>
+                <div class="data">{{Data.gender}}</div>
+            </div>
+            </ng-container>
+            <ng-container *ngIf="Data?.height">
+            <div class="dimensions" >
+                <div class="title">Height: </div>
+                <div class="data">{{Data.height}}</div>
+            </div>
+            </ng-container>
+            <ng-container *ngIf="allspecies.length > 0">
+            <div class="species" >
+                <div class="title">Species: </div>
+                <div class="data">
+                    <ng-container *ngFor="let species of allspecies">
+                        {{species}}
+                    </ng-container>
+                </div>
+            </div>
+            </ng-container>
+            <ng-container  *ngIf="Data?.hair_color">
+            <div class="hair">
+                <div class="title">Hair Color: </div>
+                <div class="data">{{Data.hair_color}}</div>
+            </div>
+            </ng-container>
+            <ng-container *ngIf="Data?.eye_color">
+            <div class="eye" >
+                <div class="title" *ngIf="">Eye color: </div>
+                <div class="data">{{Data.eye_color}}</div>
+            </div>
+            </ng-container>
+            <ng-container *ngIf="Data?.skin_color">
+            <div class="skin">
+                <div class="title" >Skin color: </div>
+                <div class="data">{{Data.skin_color}}</div>
+            </div>
+            </ng-container>
+            <ng-container *ngIf="allfilms.length > 0">
+            <div class="films">
+                <div class="title" >films: </div>
+                <div class="data">
+                    <ng-container *ngFor="let films of allfilms">
+                        {{films}}, 
+                    </ng-container>
+                </div>
+            </div>
+            </ng-container>
+            <ng-container *ngIf="allvehicles.length > 0">
+                <div class="vehicles" >
+                    <div class="title">Vehicle: </div>
+                    <div class="data">
+                        <ng-container *ngFor="let vehicle of allvehicles">
+                            {{vehicle}}, 
+                        </ng-container>
+                    </div>
+                </div>
+            </ng-container>
+            <ng-container *ngIf="allvehicles.length > 0">
+            <div class="starship" >
+                <div class="title">Starship: </div>
+                <div class="data">
+                    <ng-container *ngFor="let starship of allstarship">
+                        {{starship}}, 
+                    </ng-container>
+                </div>
+            </div>
+            </ng-container>
+            <ng-container *ngIf="allplanet.length > 0">
+            <div class="planet" >
+                <div class="title">Planet: </div>
+                <div class="data">
+                    <ng-container *ngFor="let planet of allplanet">
+                        {{planet}}
+                    </ng-container>
+                </div>
+            </div>
+            </ng-container>
+            <ng-container *ngIf="allpeople.length > 0">
+            <div class="people" >
+                <div class="title">People: </div>
+                <div class="data">
+                    <ng-container *ngFor="let people of allpeople">
+                        {{people}}, 
+                    </ng-container>
+                </div>
+            </div>
+            </ng-container>
+            <ng-container  *ngIf="Data?.model">
+            <div class="any" >
+                <div class="title">Model: </div>
+                <div class="data">
+                    {{Data.model}}
+                </div>
+            </div>
+            </ng-container>
+            <ng-container *ngIf="Data?.manufacturer">
+            <div class="any"  >
+                <div class="title">Manufacturer: </div>
+                <div class="data">
+                    {{Data.manufacturer}}
+                </div>
+            </div>
+            </ng-container>
+            <ng-container *ngIf="Data?.cost_in_credits">
+            <div class="any" >
+                <div class="title">Cost: </div>
+                <div class="data">
+                    {{Data.cost_in_credits}} Credits
+                </div>
+            </div>
+            </ng-container>
+            <ng-container *ngIf="Data?.skin_colors">
+            <div class="any"  >
+                <div class="title">Skin Color: </div>
+                <div class="data">
+                    {{Data.skin_colors}}
+                </div>
+            </div>
+            </ng-container>
+            <ng-container *ngIf="Data?.language">
+            <div class="any"  >
+                <div class="title">Language: </div>
+                <div class="data">
+                    {{Data.language}}
+                </div>
+            </div>
+            </ng-container>
+            <ng-container *ngIf="Data?.director">
+            <div class="any"  >
+                <div class="title">Director: </div>
+                <div class="data">
+                    {{Data.director}}
+                </div>
+            </div>
+            </ng-container>
+            <ng-container *ngIf="Data?.producer">
+            <div class="any"  >
+                <div class="title">Producer: </div>
+                <div class="data">
+                    {{Data.producer}}
+                </div>
+            </div>
+            </ng-container>
+            <ng-container *ngIf="Data?.release_date">
+            <div class="any"  >
+                <div class="title">Released on: </div>
+                <div class="data">
+                    {{Data.release_date}}
+                </div>
+            </div>
+            </ng-container>
+            <ng-container *ngIf="Data?.population">
+            <div class="any"  >
+                <div class="title">Population: </div>
+                <div class="data">
+                    {{Data.population}}
+                </div>
+            </div>
+            </ng-container>
+            <ng-container *ngIf="Data?.climate">
+            <div class="any"  >
+                <div class="title">Climate: </div>
+                <div class="data">
+                    {{Data.climate}}
+                </div>
+            </div>
+            </ng-container>
+            <ng-container *ngIf="Data?.terrain">
+            <div class="any"  >
+                <div class="title">Terrain: </div>
+                <div class="data">
+                    {{Data.terrain}}
+                </div>
+            </div>
+               </ng-container>
+            </ngx-simplebar>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,24 @@
+<div class="container">
+    <ng-container *ngFor="let list of dataList?.results">
+        <div class="name">
+           <ng-container *ngIf="urlPath === 'film';else name">
+            <button class="myBtn" (click)="toDisplay(list)" [routerLink]="['/list/'+urlPath+'/view/']">{{list?.title}}</button>
+           </ng-container>
+           <ng-template #name>
+            <button class="myBtn" (click)="toDisplay(list)" [routerLink]="['/list/'+urlPath+'/view/']">{{list?.name}}</button>
+           </ng-template>
+        </div>
+        </ng-container>
+     <div class="prv-nxt">
+        <ng-container *ngIf="dataList?.previous">
+            <div class="prev">
+                <button class="previous pagebtn" [routerLink]="['/list/'+urlPath+'/page/', {type:type,page:btnPrv}]">PREVIOUS</button>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="dataList?.next">
+           <div class="nxt">
+            <button class="next pagebtn" [routerLink]="['/list/'+urlPath+'/page/',  {type:type,page:btnNxt}]">NEXT</button>
+           </div>
+        </ng-container>
+     </div>
+</div>

@@ -1,0 +1,64 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-self: center;
+
+    .name {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-self: center;
+
+        .myBtn {
+            width: 340px;
+            height: 44px;
+            background-color: transparent;
+            color: white;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            color: #ffffff;
+            font-size: 18px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: bold;
+            margin-top: 40px;
+        }
+
+        .myBtn:hover {
+            background-color: rgba($color: #00A8FF, $alpha: 0.4);
+        }
+    }
+
+    .prv-nxt {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-self: center;
+        margin-top: 40px;
+        margin-bottom: 24px;
+        columns: 1;
+          column-gap: 30px;
+      .prev,.nxt{
+          
+        .pagebtn {
+            width: 160px;
+            height: 50px;
+            color: #ffffff;
+            font-size: 20px;
+            font-family: 'Open Sans', sans-serif;
+            background-color: rgba($color: #00A8FF, $alpha: 0.4);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            
+        }
+        
+      }
+
+      
+    }
+}

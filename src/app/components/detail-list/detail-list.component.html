@@ -1,0 +1,39 @@
+<app-header></app-header>
+<div class="container">
+  <div class="row text-center">
+    <button class="btn films" [routerLink]="['/list/film',{type:'film',page:1}]" routerLinkActive="link-active">
+      <div>
+        <p class="link text-center">FILMS</p>
+      </div>
+    </button>
+    <button class="btn species" [routerLink]="['/list/species',{type:'specie',page:1}]" routerLinkActive="link-active">
+      <div>
+        <p class="link text-center">SPECIES</p>
+      </div>
+    </button>          
+    <button class="btn planets" [routerLink]="['/list/planets',{type:'planet',page:1}]" routerLinkActive="link-active">
+      <div>
+        <p class="link text-center">PLANETS</p>
+      </div>
+    </button>      
+    <button class="btn people" [routerLink]="['/list/people',{type:'people',page:1}]" routerLinkActive="link-active">
+      <div>
+        <p class="link text-center">CHARACTERS</p>
+      </div>
+    </button>      
+    <button class="btn starship" [routerLink]="['/list/starships',{type:'starship',page:1}]" routerLinkActive="link-active">
+      <div>
+        <p class="link text-center">STARSHIP</p>
+      </div>
+    </button>      
+    <button class="btn vehicle" [routerLink]="['/list/vehicles',{type:'vehicle',page:1}]" routerLinkActive="link-active">
+      <div>
+        <p class="link text-center">VEHICLES</p>
+      </div>
+    </button>      
+  </div>
+    <ngx-simplebar class="lists-details" [options]="options">
+              <router-outlet></router-outlet>
+    </ngx-simplebar>
+</div>
+<app-footer></app-footer>

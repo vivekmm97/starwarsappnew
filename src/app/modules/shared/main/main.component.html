@@ -1,0 +1,58 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row text-center">
+        <div class="col-xl-4 col-sm-4 col-4 images img-fluid">                  
+          <button class="btn films" [routerLink]="['/list/film',{type:'film',page:1}]">
+            <img alt="films">
+                <div>
+                   <p class="link text-center"><a [routerLink]="['/list/film',{type:'film',page:1}]">FILMS</a></p>
+                </div>
+          </button>
+        </div>
+        <div class="col-xl-4 col-sm-4 col-4 images img-fluid">    
+          <button class="btn species" [routerLink]="['/list/species',{type:'specie',page:1}]">
+             <img alt="species">
+                <div>
+                   <p class="link text-center"><a [routerLink]="['/list/species',{type:'specie',page:1}]">SPECIES</a></p>
+                </div>
+          </button>
+        
+        </div>
+        <div class="col-xl-4 col-sm-4 col-4 images img-fluid">
+          <button class="btn planets" [routerLink]="['/list/planets',{type:'planet',page:1}]">
+             <img alt="planets">
+                <div>
+                   <p class="link text-center"><a [routerLink]="['/list/planets',{type:'planet',page:1}]">PLANETS</a></p>
+                </div>
+          </button>      
+        </div>
+
+        <div class="col-xl-4 col-sm-4 col-4 images img-fluid">      
+          <button class="btn people" [routerLink]="['/list/people',{type:'people',page:1}]">
+            <img alt="people">
+                <div>
+                   <p class="link text-center"><a [routerLink]="['/list/people',{type:'people',page:1}]">CHARACTERS</a></p>
+                </div>
+          </button>       
+        </div>
+        <div class="col-xl-4 col-sm-4 col-4 images img-fluid">      
+          <button class="btn starship" [routerLink]="['/list/starships',{type:'starship',page:1}]">
+            <img alt="starship">
+                <div>
+                   <p class="link text-center"><a [routerLink]="['/list/starships',{type:'starship',page:1}]">STARSHIP</a></p>
+                </div>
+          </button>
+        
+        </div>
+        <div class="col-xl-4 col-sm-4 col-4 images img-fluid">       
+          <button class="btn vehicle" [routerLink]="['/list/vehicles',{type:'vehicle',page:1}]">
+            <img alt="vehicle">
+                <div>
+                   <p class="link text-center"><a [routerLink]="['/list/vehicles',{type:'vehicle',page:1}]">VEHICLES</a></p>
+                </div>
+          </button>       
+        </div>
+   </div>
+
+    <app-footer></app-footer>
+</div>
