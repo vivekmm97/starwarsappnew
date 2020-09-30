@@ -9,7 +9,7 @@ import { MainServiceService } from 'src/app/services/main-service.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute, private api: MainServiceService) { }
+  constructor(private route: ActivatedRoute, private mainService: MainServiceService) { }
   pageno;
   public peopleList: any = [];
   public btnnxt;
@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
   getPageNo() {
     this.route.paramMap.subscribe( params => {
       this.pageno =  Number(params.get('page'));
@@ -28,8 +29,9 @@ export class HomeComponent implements OnInit {
       this.getList(this.pageno);
     });
   }
-  getList(num) {
-    this.api.getPeopleList(num).subscribe(data => {
+  
+  getList(num: number) {
+    this.mainService.getPeople(num).subscribe(data => {
       if (data) {
         this.peopleList = data;
 
@@ -42,7 +44,8 @@ export class HomeComponent implements OnInit {
       }
     });
   }
+  
   toDisplay(event) {
-    this.api.getData(event);
+    this.mainService.getData(event);
   }
 }

@@ -1,4 +1,4 @@
-.ft-head
+.footer-main
 {
     display: flex;
     flex-direction: column;
@@ -22,7 +22,7 @@
         flex-direction: row;
         flex-wrap: wrap;
     }
-    .row
+    .links
     {
         display: flex;
         flex-direction: row;
@@ -46,6 +46,13 @@
             }
         }
     }
+    }
+
+    @media all and (max-width: 1200px) , (max-width: 600px) , (max-width : 200px) {
+        .links{
+            display: block;
+            column-count: 4;
+        }
     }
     .footer-text
     {

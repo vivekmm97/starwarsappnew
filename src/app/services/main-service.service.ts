@@ -13,7 +13,10 @@ export class MainServiceService {
     dataSrc$ = this.dataSource.asObservable();
     public myData;
     constructor(private http: HttpClient) { }
-    getFilmList(page: number) {
+
+// load film details 
+
+    getFilm(page: number) {
       return new Observable(
         observer => {
           this.http.get(urls.films + '?page=' + page)
@@ -27,7 +30,10 @@ export class MainServiceService {
         }
       );
     }
-    getPlanetList(page: number) {
+
+    // load planet details 
+
+    getPlanet(page: number) {
       return new Observable(
         observer => {
           this.http.get(urls.planets + '?page=' + page)
@@ -41,7 +47,10 @@ export class MainServiceService {
         }
       );
     }
-    getSpeciesList(page: number) {
+
+    // load species details 
+
+    getSpecies(page: number) {
       return new Observable(
         observer => {
           this.http.get(urls.species + '?page=' + page)
@@ -55,7 +64,10 @@ export class MainServiceService {
         }
       );
     }
-    getPeopleList(page: number) {
+
+    // load people details 
+
+    getPeople(page: number) {
       return new Observable(
         observer => {
           this.http.get(urls.people + '?page=' + page)
@@ -69,7 +81,10 @@ export class MainServiceService {
         }
       );
     }
-    getVehicleList(page: number) {
+
+    // load vehicle details 
+
+    getVehicle(page: number) {
       return new Observable(
         observer => {
           this.http.get(urls.vehicles + '?page=' + page)
@@ -83,7 +98,10 @@ export class MainServiceService {
         }
       );
     }
-    getShipList(page: number) {
+
+    // load starship details 
+
+    getShip(page: number) {
       return new Observable(
         observer => {
           this.http.get(urls.starship + '?page=' + page)
@@ -97,9 +115,11 @@ export class MainServiceService {
         }
       );
     }
+
     getData(myevent: any) {
       this.myData = myevent;
     }
+    
     getByCallback(callbacks) {
       callbacks(this.myData);
     }

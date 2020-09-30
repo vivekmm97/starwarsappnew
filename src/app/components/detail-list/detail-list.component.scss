@@ -1,27 +1,26 @@
 
-.container{
+.main{
     display: flex;
     flex-direction: column;
     justify-content: center;
-      .row
+      .list
       {
+        width: auto;
         margin-left: auto;
         margin-right: auto;
-        //padding-bottom: 50px;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         border-top: 1px solid #1B6BA2;
         border-bottom: 1px solid #1B6BA2;
-        .btn
+        .bttn
         {
           margin-right: 5px;
           height: 72px;
-          width: 174px;
+          width: auto;
           background-color: transparent;
           outline: none;
           border: none;
-          cursor: pointer;
           .link
           {
             color: #ffffff;
@@ -30,27 +29,53 @@
             font-weight: bold;
             padding:10px;
             width: 100%;
+            @media all and (max-width: 1000px) , (max-width: 800px) , (max-width: 600px)  {
+              font-size: 18px;
+            }
           }
       }
-      .btn:hover
+      .bttn:hover
           {
               background-color: #00a8ff;
               opacity: 40%;
           }
     }
-    @media only screen and (max-width: 1130px) {
-      .menu{
-          width:800px;
-      }
+
+    // responsive
+
+    @media all and (max-width: 1000px) , (max-width: 800px) , (max-width: 600px)  {
+     
+          .list{
+            display: flex;
+            flex-direction: row;
+            width: 82%;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            .bttn{
+              height: 50px;
+              width: 112px;
+              .link{
+                font-size:14px ;
+                  width: 100%;
+                  padding:10px ;
+              }
+            }
+          }
+  
      }
-  @media only screen and (max-width: 600px) {
-   .menu{
-       width:400px;
+
+     @media all and (max-width: 1000px) , (max-width: 800px) , (max-width: 600px)  {
+      .main{
+       width:41%;
    }
   }
-  .list-details{
+  .lists-details{
     z-index: 30;
     margin-top: 40px;
     height: 650px;
+    // @media all and (max-width: 1000px) , (max-width: 800px) , (max-width: 600px)  {
+    //   margin-top: 20px;
+    // }
+
   }
   }

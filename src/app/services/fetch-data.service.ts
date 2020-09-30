@@ -8,6 +8,9 @@ import { Observable } from 'rxjs/internal/Observable';
 export class FetchDataService {
   
   constructor(private http: HttpClient) { }
+
+  // load films details
+  
   getFilmList(filmUrl) {
     return new Observable(
       observer => {
@@ -22,6 +25,9 @@ export class FetchDataService {
 }
     );
   }
+
+    // load planets details
+
   getPlanetList(planetUrl) {
     return new Observable(
       observer => {
@@ -36,6 +42,9 @@ export class FetchDataService {
 }
     );
   }
+
+    // load species details
+
   getSpeciesList(speciesUrl) {
     return new Observable(
       observer => {
@@ -50,6 +59,9 @@ export class FetchDataService {
 }
     );
   }
+
+    // load people details
+
   getPeopleList(peopleUrl) {
     return new Observable(
       observer => {
@@ -64,6 +76,9 @@ export class FetchDataService {
 }
     );
   }
+
+    // load vehicles details
+
   getVehicleList(vehicleUrl) {
     return new Observable(
       observer => {
@@ -78,6 +93,9 @@ export class FetchDataService {
 }
     );
   }
+
+    // load starship details
+
   getShipList(shipUrl) {
     return new Observable(
       observer => {

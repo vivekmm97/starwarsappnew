@@ -1,6 +1,6 @@
-.container-fluid
+.main
 {
-  .container
+  .main-section
   {
     .header
     {
@@ -9,6 +9,7 @@
         background-color: transparent;
         border: 0ch;
         outline: 0;
+        margin-bottom: 50px;
        .img
     {
       display: block;
@@ -17,6 +18,12 @@
       margin-top: 80px;
     }
   }
+  @media all and (max-width: 1200px) , (max-width: 600px) , (max-width : 200px) {
+    .bttn{
+      margin-right: auto;
+      margin-left: auto;
+    }
+}
     }
   }
 }

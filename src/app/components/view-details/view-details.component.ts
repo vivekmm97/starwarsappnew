@@ -9,7 +9,7 @@ import {MainServiceService} from 'src/app/services/main-service.service';
 })
 export class ViewDetailsComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute, private api: MainServiceService) { }
+  constructor(private route: ActivatedRoute, private mainService: MainServiceService) { }
   pageNo;
   type;
   urlPath;
@@ -22,6 +22,7 @@ export class ViewDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.getPage();
   }
+
   getPage() {
     this.route.paramMap.subscribe(params => {
       this.pageNo = Number(params.get('page'));
@@ -34,6 +35,9 @@ export class ViewDetailsComponent implements OnInit {
       console.log(this.type);
     });
   }
+
+  // load list for each options
+  
   getList(num, types) {
     switch (types) {
       case 'people': {
@@ -66,9 +70,13 @@ export class ViewDetailsComponent implements OnInit {
     }
 
   }
+
+
+  // load people
+  
   getPeopleList(num) {
     this.urlPath = 'people';
-    this.api.getPeopleList(num).subscribe(data => {
+    this.mainService.getPeople(num).subscribe(data => {
       if (data) {
         this.dataList = data;
 
@@ -81,9 +89,12 @@ export class ViewDetailsComponent implements OnInit {
       }
     });
   }
+
+  // load planets
+  
   getPlanetList(num) {
     this.urlPath = 'planets';
-    this.api.getPlanetList(num).subscribe(data => {
+    this.mainService.getPlanet(num).subscribe(data => {
       if (data) {
         this.dataList = data;
 
@@ -96,9 +107,12 @@ export class ViewDetailsComponent implements OnInit {
       }
     });
   }
+
+  // load films
+  
   getFilmList(num) {
     this.urlPath = 'film';
-    this.api.getFilmList(num).subscribe(data => {
+    this.mainService.getFilm(num).subscribe(data => {
       if (data) {
         this.dataList = data;
 
@@ -111,9 +125,12 @@ export class ViewDetailsComponent implements OnInit {
       }
     });
   }
+
+  // load species
+  
   getSpeciesList(num) {
     this.urlPath = 'species';
-    this.api.getSpeciesList(num).subscribe(data => {
+    this.mainService.getSpecies(num).subscribe(data => {
       if (data) {
         this.dataList = data;
 
@@ -126,9 +143,12 @@ export class ViewDetailsComponent implements OnInit {
       }
     });
   }
+
+  // load vehicles
+  
   getVehicleList(num) {
     this.urlPath = 'vehicles';
-    this.api.getVehicleList(num).subscribe(data => {
+    this.mainService.getVehicle(num).subscribe(data => {
       if (data) {
         this.dataList = data;
 
@@ -141,9 +161,12 @@ export class ViewDetailsComponent implements OnInit {
       }
     });
   }
+
+  // load starships
+  
   getShipList(num) {
     this.urlPath = 'starships';
-    this.api.getShipList(num).subscribe(data => {
+    this.mainService.getShip(num).subscribe(data => {
       if (data) {
         this.dataList = data;
 
@@ -157,8 +180,9 @@ export class ViewDetailsComponent implements OnInit {
     });
 
   }
+  
   toDisplay(event) {
-    this.api.getData(event);
+    this.mainService.getData(event);
   }
 
 }
